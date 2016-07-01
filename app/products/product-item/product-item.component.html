@@ -1,0 +1,17 @@
+<div class="thumbnail">
+    <a [routerLink]="['/product', product.id]" [queryParams]="{}" class="product-link">
+        <img [src]="product.imgUrl" [alt]="product.name" imagePreloader>
+    </a>
+    <div class="caption">
+        <h3>{{product.name}}</h3>
+        <p class="description">{{product.description}}</p>
+        <p class="clearfix">
+            <button (click)="addToCart(product)" class="btn btn-link pull-left">
+                <i class="fa fa-shopping-cart fa-2x"></i>
+            </button> 
+            <span class="pull-right" style="margin-top: 20px">
+                {{ product.price | currency: 'USD': true: '1.2-2' }}
+            </span>
+        </p>
+    </div>
+</div>

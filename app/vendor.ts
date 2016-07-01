@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import 'rxjs/Rx';
 import 'zone.js/dist/zone';
-// import 'angular2-in-memory-web-api';
+import 'angular2-in-memory-web-api';
 
 import '@angular/common';
 import '@angular/compiler';

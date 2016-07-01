@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="form-horizontal col-sm-4">
+        <div class="form-group">
+            <label (click)="getProducts()" for="search" class="col-sm-2 control-label">Search:</label>
+            <div class="col-sm-10">
+                <input [(ngModel)]="searchQuery" type="text" class="form-control" id="search">
+            </div>
+        </div>
+    </div>
+</div>
+<spinner [hidden]="!isLoading"></spinner>
+
+<div [hidden]="isLoading" class="row">
+    <div *ngFor="let product of products | myFilter: {name: searchQuery}" class="col-md-4">
+        <product-item [product]="product"></product-item>
+    </div>
+</div>

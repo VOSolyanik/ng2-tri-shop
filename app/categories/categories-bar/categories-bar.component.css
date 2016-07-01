@@ -1,0 +1,10 @@
+categoriesbar{
+    display: block;
+}
+.breadcrumb{
+    display: inline-block;
+}
+.active a{
+    color: #95a5a6;
+    text-decoration: none;
+}

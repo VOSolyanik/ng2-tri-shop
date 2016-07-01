@@ -1,0 +1,6 @@
+<h1 class="text-center text-uppercase">{{title}}</h1>
+<ol *ngIf="categories.length" class="breadcrumb">
+  <li *ngFor="let category of categories" [ngClass]="{'active': selectedCategoryId == category.id }">
+      <a [routerLink]="['./']" [queryParams]="{categoryId: category.id}">{{category.name}}</a>
+  </li>
+</ol>

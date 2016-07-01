@@ -1,0 +1,51 @@
+<form class="form-horizontal" (submit)="onSubmit(orderForm.value)" #orderForm="ngForm" novalidate action="#">
+    <div class="form-group">
+        <label for="firstName" class="col-sm-2 control-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstName" placeholder="First Name" required
+                [(ngModel)]="model.firstName" name="firstName" #firstName="ngModel">
+            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+                Field is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required
+                [(ngModel)]="model.lastName" name="lastName" #lastName="ngModel">
+            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+                Field is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" placeholder="Email"
+                [(ngModel)]="model.email" name="email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="address" class="col-sm-2 control-label">Address</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="address" placeholder="Address"
+                [(ngModel)]="model.address" name="address">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Phone</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="phone" placeholder="Phone" required
+                [(ngModel)]="model.phone" name="phone" #phone="ngModel">
+            <div [hidden]="phone.valid || phone.pristine" class="alert alert-danger">
+                Field is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-btn-primary" [disabled]="!orderForm.form.valid">Order</button>
+        </div>
+    </div>
+</form>
