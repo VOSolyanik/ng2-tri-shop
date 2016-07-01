@@ -1,0 +1,12 @@
+.shop-image{
+    position: relative;
+    text-align: center;
+    height: 680px;
+    background: url(../../assets/img/shop-icon.png) 50% 50% no-repeat;
+}
+.shop-image .btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
